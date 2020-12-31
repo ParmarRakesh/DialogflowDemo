@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+<title>Dialogflow Chatbot demo</title>
+<!-- <style>
+  df-messenger {
+   --df-messenger-bot-message: #878fac;
+   --df-messenger-button-titlebar-color: #df9b56;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: #479b3d;
+   
+
+  }
+  .container {
+          background-image: url("img.png");
+          background-repeat: no-repeat;
+          min-height: 940px;
+          height: 50%;
+          margin: 10px 30px;}
+</style> -->
+
+</head>  
+
+<body>
+  
+    <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+   <df-messenger
+      intent="WELCOME"
+      chat-title="VirtualSanta"
+      agent-id="b871a57f-db7e-4c39-b4b4-5a7a56155f6f"
+      language-code="en"
+    ></df-messenger> -->
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="blance"
+  agent-id="0b135ea1-02f1-4387-83a8-0df8fbc21f80"
+  language-code="en"
+></df-messenger>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        
+    window.addEventListener('dfMessengerLoaded', function (event) {
+        $r1 = document.querySelector("df-messenger");
+        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+
+        var sheet = new CSSStyleSheet;
+        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 400px }`);
+
+        $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+       
+
+        // MORE OF YOUR DIALOGFLOW MESSENGER CODE
+    });
+
+   
+    
+
+      })
+
+
+      const dfMessenger = document.querySelector('df-messenger');
+     dfMessenger.addEventListener('df-chip-clicked', function (event) {
+  // Handle event
+    console.log(event);
+     if(event.detail.query=='No')
+    {
+      console.log('you clicked no');
+      window.open( 
+              "https://www.geeksforgeeks.org", "_blank"); 
+    }
+
+
+});
+    </script>
+
+
+  
+</body>
+
+</html>
+
+
+
