@@ -25,7 +25,7 @@
 </head>  
 
 <body>
-  <p> Welcome to demo of webhook 4</p>
+  <p> Welcome to demo of webhook 5</p>
     <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
    <df-messenger
       intent="WELCOME"
@@ -68,7 +68,13 @@
 
 
       const dfMessenger = document.querySelector('df-messenger');
-       dfMessenger.setAttribute("user-id", {type:"Fiat", model:"500", color:"white"});
+      const car = {
+        color: 'black',
+      manufacturer: 'Ford',
+     model: 'Fiesta'
+    }
+      console.log(car)
+       dfMessenger.setAttribute("user-id", car);
        dfMessenger.setAttribute("email-id", "USER@user.com");
      dfMessenger.addEventListener('df-chip-clicked', function (event) {
   // Handle event
