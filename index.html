@@ -45,8 +45,8 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        const dfMessenger = document.querySelector('df-messenger');
-          dfMessenger.setAttribute("user-id", YOUR_USER);
+       
+        
     window.addEventListener('dfMessengerLoaded', function (event) {
         $r1 = document.querySelector("df-messenger");
         $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
@@ -68,6 +68,7 @@
 
 
       const dfMessenger = document.querySelector('df-messenger');
+       dfMessenger.setAttribute("userid", "USER");
      dfMessenger.addEventListener('df-chip-clicked', function (event) {
   // Handle event
     console.log(event);
