@@ -25,7 +25,7 @@
 </head>  
 
 <body>
-  <p> Welcome to demo of webhook 5</p>
+  <p> Welcome to demo of webhook 6</p>
     <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
    <df-messenger
       intent="WELCOME"
@@ -68,11 +68,14 @@
 
 
       const dfMessenger = document.querySelector('df-messenger');
-      const car = {
-        color: 'black',
-      manufacturer: 'Ford',
-     model: 'Fiesta'
-    }
+    const car =  {
+   fields: {
+     foo: {
+       kind: 'stringValue',
+       stringValue: 'bar'
+     }
+   }
+ }
       console.log(car)
        dfMessenger.setAttribute("user-id", car);
        dfMessenger.setAttribute("email-id", "USER@user.com");
